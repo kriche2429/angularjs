@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app='AssignmentOne'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+      .red {
+           margin: auto;
+           width: fit-content;
+           border: 3px solid #ff4a4a;
+           border-radius: 25px;
+           padding: 10px;
+           color: #ff4a4a;
+           text-align: center;
+               margin-top: 10px;
+        }
+        .green {
+             margin: auto;
+             width: fit-content;
+             border: 3px solid #83fca4;
+             border-radius: 25px;
+             padding: 10px;
+             color: #83fca4;
+             text-align: center;
+                 margin-top: 10px;
+          }
+    </style>
+    <title>assignment one</title>
+  </head>
+  <body>
+    <div style="text-align: center;" ng-controller='LunchCheckController'>
+             <h1>Lunch Validator</h1><! --  not considering ", ," as an item towards to the count. -->
+             <input type="text" ng-model="mylunch" >
+             <button type="button" name="Check If Too Much" ng-click="lunchValidate();">Check If Too Much</button>
+             <div ng-class="className">{{lunchinfo}}</div>
+    </div>
+  </body>
+</html>
